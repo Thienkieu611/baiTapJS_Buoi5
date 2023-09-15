@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bài tập hàm</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <div class="container py-5">
+      <div class="card w-75 mx-auto">
+        <div class="card-body p-0">
+          <div class="row">
+            <div class="d-flex align-items-start">
+              <div
+                class="nav-tab col-2 nav flex-column nav-pills pt-3 align-items-center"
+                id="v-pills-tab"
+                role="tablist"
+                aria-orientation="vertical"
+              >
+                <button
+                  class="nav-link active"
+                  id="v-pills-bai1-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-bai1"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-bai1"
+                  aria-selected="true"
+                >
+                  Bài 1
+                </button>
+                <button
+                  class="nav-link"
+                  id="v-pills-bai2-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-bai2"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-bai2"
+                  aria-selected="false"
+                >
+                  Bài 2
+                </button>
+                <button
+                  class="nav-link"
+                  id="v-pills-bai3-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-bai3"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-bai3"
+                  aria-selected="false"
+                >
+                  Bài 3
+                </button>
+                <button
+                  class="nav-link"
+                  id="v-pills-bai4-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-bai4"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-bai4"
+                  aria-selected="false"
+                >
+                  Bài 4
+                </button>
+              </div>
+              <div class="tab-content col-10" id="v-pills-tabContent">
+                <!-- content__bai1 -->
+                <div
+                  class="tab-pane fade show active"
+                  id="v-pills-bai1"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-bai1-tab"
+                >
+                  <h3 class="card-heading">🏫 Quản lý tuyển sinh</h3>
+                  <div class="bai1">
+                    <div class="block__modal">
+                      <b>💡 Mô hình 3 khối</b>
+                      <br />
+                      <button
+                        type="button"
+                        class="btn btn-info m-3"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapse__bai1"
+                      >
+                        Xem chi tiết
+                      </button>
+                      <div id="collapse__bai1" class="collapse">
+                        <p>Đầu vào:</p>
+                        <ul>
+                          <li>Điểm chuẩn (diemChuan): number</li>
+                          <li>Khu vực (khuVuc): number</li>
+                          <li>Đối tượng dự thi (doiTuong): number</li>
+                          <li>
+                            Điểm thi 3 môn (diemThi1, diemThi2, diemThi3):
+                            number
+                          </li>
+                        </ul>
+                        <p>Các bước xử lý:</p>
+                        <ul>
+                          <li>
+                            Bước 1: Tạo hàm tính điểm riêng ở một file
+                            method.js, trong hàm đó tiến hành tính điểm và xét
+                            điều kiện. Nếu 1 trong 3 điểm nhập vào có 1 điểm
+                            không thì hiển thị kết quả rớt. Bên cạnh đó xét điều
+                            kiện để tính điểm dựa vào công thức: <br />
+                            diemUuTien = khuVuc + doiTuong;<br />
+                            diemTong = diemThi1 + diemThi2 + diemThi3 +
+                            diemUuTien;
+                          </li>
+                          <li>
+                            Bước 2: Ở file index.js tiến hành khai báo biến và
+                            truy xuất để lấy giá trị từ người dùng nhập vào.
+                          </li>
+                          <li>
+                            Bước 3: Tạo biến ketQua và gọi đến hàm
+                            quanLyTuyenSinh() trong method.js, truyền dữ liệu để
+                            tiến hành tính.
+                          </li>
+                          <li>Bước 4: In kết quả ra màn hình</li>
+                        </ul>
+                        <p>Đầu ra:</p>
+                        <ul>
+                          <li>Kết quả tuyển sinh (ketQua): string</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <form id="frmQuanLyTuyenSinh" class="row">
+                      <div class="col-4">
+                        <input
+                          type="number"
+                          id="diemChuan"
+                          class="form-control input__nav"
+                          placeholder="Điểm chuẩn"
+                        />
+                      </div>
+                      <div class="col-4">
+                        <select id="khuVuc" class="form-control input__nav">
+                          <option value="0">Chọn khu vực</option>
+                          <option value="0">X</option>
+                          <option value="2">A</option>
+                          <option value="1">B</option>
+                          <option value="0.5">C</option>
+                        </select>
+                      </div>
+                      <div class="col-4">
+                        <select id="doiTuong" class="form-control input__nav">
+                          <option value="0">Chọn đối tượng</option>
+                          <option value="0">0</option>
+                          <option value="2.5">1</option>
+                          <option value="1.5">2</option>
+                          <option value="1">3</option>
+                        </select>
+                      </div>
+                      <div class="col-4">
+                        <input
+                          type="number"
+                          id="diemMonThuNhat"
+                          class="form-control input__nav mt-3"
+                          placeholder="Điểm môn thứ nhất"
+                        />
+                      </div>
+                      <div class="col-4">
+                        <input
+                          type="number"
+                          id="diemMonThuHai"
+                          class="form-control input__nav mt-3"
+                          placeholder="Điểm môn thứ hai"
+                        />
+                      </div>
+                      <div class="col-4">
+                        <input
+                          type="number"
+                          id="diemMonThuBa"
+                          class="form-control input__nav mt-3"
+                          placeholder="Điểm môn thứ ba"
+                        />
+                      </div>
+                      <div class="col-12 my-3">
+                        <button
+                          type="submit"
+                          id="btnKetQuaTuyenSinh"
+                          class="btn btn-primary btn__nav"
+                        >
+                          Kết quả
+                        </button>
+                      </div>
+                      <div class="alert alert-success mt-2">
+                        👉
+                        <span id="ketQuaTuyenSinh"></span>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <!-- content__bai2 -->
+                <div
+                  class="tab-pane fade"
+                  id="v-pills-bai2"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-bai2-tab"
+                >
+                  <h3 class="card-heading">🔋 Tính tiền điện</h3>
+                  <div class="bai2">
+                    <div class="block__modal">
+                      <b>💡 Mô hình 3 khối</b>
+                      <br />
+                      <button
+                        type="button"
+                        class="btn btn-info m-3"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapse__bai2"
+                      >
+                        Xem chi tiết
+                      </button>
+                      <div id="collapse__bai2" class="collapse">
+                        <p>Đầu vào:</p>
+                        <ul>
+                          <li>Họ và tên (hoTen): string</li>
+                          <li>Số KW (soKW): number</li>
+                        </ul>
+
+                        <p>Các bước xử lý:</p>
+                        <ul>
+                          <li>
+                            Bước 1: Tạo hàm tính điện riêng ở một file
+                            method.js, trong hàm đó tiến hành tính điện và xét
+                            điều kiện. Dựa vào yêu cầu đề để đưa điều kiện hợp
+                            lý: <br />
+                            50kw đầu: 500d/kw <br />
+                            50kw kế: 650d/kw <br />
+                            100kw kế: 850d/kw <br />
+                            150kw kế: 1100d/kw <br />
+                            còn lại: 1300d/kw
+                          </li>
+                          <li>
+                            Bước 2: Trở lại index.js tạo 2 biến và tiến hành
+                            truy xuất đến để lấy dữ liệu ngừoi dùng.
+                          </li>
+                          <li>
+                            Bước 3: Tạo biến đầu ra và tiến hành gọi đến hàm
+                            tinhDienTieuThu(), truyền dữ liệu để tính kết quả.
+                          </li>
+                          <li>Bước 4: In kết quả ra màn hình</li>
+                        </ul>
+                        <p>Đầu ra:</p>
+                        <ul>
+                          <li>Kết quả Điện (ketQuaDien): string</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <form id="frmTinhTienDien" class="row">
+                      <div class="col-4">
+                        <input
+                          type="text"
+                          id="hoTen"
+                          class="form-control input__nav"
+                          placeholder="Nhập họ tên"
+                        />
+                      </div>
+                      <div class="col-4">
+                        <input
+                          type="number"
+                          id="soKW"
+                          class="form-control input__nav"
+                          placeholder="Nhập số KW"
+                        />
+                      </div>
+
+                      <div class="col-12 my-3">
+                        <button
+                          type="submit"
+                          id="btnTinhTienDien"
+                          class="btn btn-primary btn__nav"
+                        >
+                          Tính tiền điện
+                        </button>
+                      </div>
+                      <div class="alert alert-success mt-2">
+                        👉
+                        <span id="tienDien"></span>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <!-- content__bai3 -->
+                <div
+                  class="tab-pane fade"
+                  id="v-pills-bai3"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-bai3-tab"
+                >
+                  <h3 class="card-heading">💰 Tính thuế thu nhập cá nhân</h3>
+                  <div class="bai3">
+                    <div class="block__modal">
+                      <b>💡 Mô hình 3 khối</b>
+                      <br />
+                      <button
+                        type="button"
+                        class="btn btn-info m-3"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapse__bai3"
+                      >
+                        Xem chi tiết
+                      </button>
+                      <div id="collapse__bai3" class="collapse">
+                        <p>Đầu vào:</p>
+                        <ul>
+                          <li>Họ và tên (hoTen): string</li>
+                          <li>Tổng thu nhập (tongThuNhap): number</li>
+                          <li>Số ngừoi phụ thuộc (soNguoiPhuThuoc): number</li>
+                        </ul>
+
+                        <p>Các bước xử lý:</p>
+                        <ul>
+                          <li>
+                            Bước 1: Tạo hàm tính tiền thuế ở riêng một file
+                            method.js, trong hàm đó tiến hành tính thu nhập chịu
+                            thuế bằng công thức: <br />
+                            thuNhapChiuThue = tongThuNhapNam - 4000000 -
+                            soNguoiPhuThuoc * 1600000;<br />
+                            Sau đó dựa trên số thu nhập chịu thuế đó xét điều
+                            kiện phần trăm thuế phải trả là bao nhiêu.
+                          </li>
+                          <li>
+                            Bước 2: Trở lại file index.js tiến hành tạo biến và
+                            truy xuất để lấy giá trị ngừoi dùng.
+                          </li>
+                          <li>
+                            Bước 3: Tạo biến kết quả và gọi hàm tinhTienThue(),
+                            truyền dữ liệu để tính giá trị thuế.
+                          </li>
+                          <li>Bước 4: In kết quả ra màn hình</li>
+                        </ul>
+                        <p>Đầu ra:</p>
+                        <ul>
+                          <li>
+                            Kết quả thuế thu nhập cá nhân (ketQuaThue): String
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <form id="frmTinhThue" class="row">
+                      <div class="col-4">
+                        <input
+                          type="text"
+                          id="hoTenThue"
+                          class="form-control input__nav"
+                          placeholder="Nhập họ tên"
+                        />
+                      </div>
+                      <div class="col-4">
+                        <input
+                          type="number"
+                          id="tongThuNhap"
+                          class="form-control input__nav"
+                          placeholder="Tổng thu nhập năm"
+                        />
+                      </div>
+                      <div class="col-4">
+                        <input
+                          type="number"
+                          id="nguoiPhuThuoc"
+                          class="form-control input__nav"
+                          placeholder="Số người phụ thuộc"
+                        />
+                      </div>
+
+                      <div class="col-12 my-3">
+                        <button
+                          type="submit"
+                          id="btnTinhTienThue"
+                          class="btn btn-primary btn__nav"
+                        >
+                          Tính tiền thuế
+                        </button>
+                      </div>
+                      <div class="alert alert-success mt-2">
+                        👉
+                        <span id="tienThue"></span>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <!-- content__bai4 -->
+                <div
+                  class="tab-pane fade"
+                  id="v-pills-bai4"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-bai4-tab"
+                >
+                  <h3 class="card-heading">🕸️ Tính tiền cáp</h3>
+                  <div class="bai4">
+                    <div class="block__modal">
+                      <b>💡 Mô hình 3 khối</b>
+                      <br />
+                      <button
+                        type="button"
+                        class="btn btn-info m-3"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapse__bai4"
+                      >
+                        Xem chi tiết
+                      </button>
+                      <div id="collapse__bai4" class="collapse">
+                        <p>Đầu vào:</p>
+                        <ul>
+                          <li>Loại khách hàng (loaiKH): string</li>
+                          <li>Mã Khách hàng (maKH): string</li>
+                          <li>Số kênh cao cấp (soKenhCaoCap): number</li>
+                          <li>Số kênh kết nối (soKenhKetNoi): number</li>
+                        </ul>
+                        <p>Các bước xử lý:</p>
+                        <ul>
+                          <li>
+                            Bước 1: Sử dụng event onchange của dropdown để tiến
+                            hành cài đặt cho khung chọn khách hàng. Tạo một hàm
+                            hienThongTinSoKetNoi(), trong hàm này tiến hành truy
+                            xuất tới dữ liệu khi ngừoi dùng chọn, nếu là Doanh
+                            Nghiệp thì dùng displa: block cho hiển thị ô input
+                            soKenhKetNoi, nếu không là Doanh Nghiệp thì ẩn nó đi
+                            bằng display: none.
+                          </li>
+                          <li>
+                            Bước 2: Vào method.js tạo hàm tinhTienDichVu để tính
+                            riêng tiền dịch vụ cho đối tượng Doanh Nghiệp.
+                          </li>
+                          <li>
+                            Bước 3: Trong method.js tạo hàm để tính tiền cap,
+                            dựa vào từng đối tượng ta có công thức tính riêng.
+                            <br />
+                            Đối với Nhà dân: tongTien = phiXuLy + phiDichVu +
+                            phiThueKenh * soKenhCaoCap; <br />
+                            Đối với Doanh nghiệp: tongTien = phiXuLy +
+                            tinhTienDichVu(soKetNoiDichVu) + phiThueKenh *
+                            soKenhCaoCap;
+                          </li>
+                          <li>
+                            Bước 4: Trở về index.js tạo biến và truy xuất để lấy
+                            dữ liệu từ ngừoi dùng. Dùng swich case để xét điều
+                            kiện cho 2 đối tượng, nếu là nhà dân sẽ có mức giá
+                            khác, doanh nghiệp sẽ có mức giá khác
+                          </li>
+                          <li>
+                            Bước 5: Tạo biến đầu ra, gọi hàm, truyền dữ liệu và
+                            in ra màn hình.
+                          </li>
+                        </ul>
+                        <p>Đầu ra:</p>
+                        <ul>
+                          <li>Kết quả tiền cap (ketQuaTienCap): String</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <form id="frmTinhTienCap" class="row">
+                      <div class="col-4">
+                        <select
+                          id="khachHang"
+                          class="form-control input__nav"
+                          onchange="hienThongTinSoKetNoi()"
+                        >
+                          <option value="">Chọn loại khách hàng</option>
+                          <option id="nhaDan" value="Nhà dân">Nhà dân</option>
+                          <option id="doanhNghiep" value="Doanh nghiệp">
+                            Doanh nghiệp
+                          </option>
+                        </select>
+                      </div>
+                      <div class="col-4">
+                        <input
+                          type="text"
+                          id="maKhachHang"
+                          class="form-control input__nav"
+                          placeholder="Nhập mã khách hàng"
+                        />
+                      </div>
+                      <div class="col-4">
+                        <input
+                          type="number"
+                          id="soKenhCaoCap"
+                          class="form-control input__nav"
+                          placeholder="Số kênh cao cấp"
+                        />
+                      </div>
+                      <div class="col-4">
+                        <input
+                          type="number"
+                          id="soKenhKetNoi"
+                          style="display: none"
+                          class="form-control input__nav mt-3"
+                          placeholder="Số kết nối"
+                        />
+                      </div>
+                      <div class="col-12 my-3">
+                        <button
+                          type="submit"
+                          id="btnTinhTienCap"
+                          class="btn btn-primary btn__nav"
+                        >
+                          Tính tiền cáp
+                        </button>
+                      </div>
+                      <div class="alert alert-success mt-2">
+                        👉
+                        <span id="tienCap"></span>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- method  -->
+    <script src="./js/method.js"></script>
+
+    <!-- js  -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>
